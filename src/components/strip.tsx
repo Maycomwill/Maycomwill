@@ -175,10 +175,10 @@ function Strip({ color = "primary", className = "" }: StripProps) {
   return (
     <div
       className={clsx(
-        "group absolute flex w-full space-x-16 overflow-hidden whitespace-nowrap py-2",
+        "animate-fade-in md:animate-none group absolute flex w-full space-x-16 overflow-hidden whitespace-nowrap py-2 transition-all duration-150 ease-in-out",
         {
-          "rotate-2 bg-zinc-700 text-zinc-900": color === "secondary",
-          "-rotate-2 bg-yellow-500 text-zinc-900": color === "primary",
+          "rotate-6 md:rotate-2 bg-zinc-700 text-zinc-900": color === "secondary",
+          "-rotate-6 md:-rotate-2 bg-yellow-500 text-zinc-900": color === "primary",
         },
         className,
       )}
