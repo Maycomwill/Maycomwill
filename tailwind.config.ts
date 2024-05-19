@@ -22,6 +22,7 @@ const config: Config = {
         "pos-100": "100% 100%",
       },
       animation: {
+        "fade-in": "fade-in 1500ms ease-in-out",
         "fade-in-left": "fade-left 1500ms ease-in-out",
         "fade-in-right": "fade-right 1500ms ease-in-out",
         "border-transition": "border-transition 2000ms ease-in-out infinite",
@@ -29,6 +30,17 @@ const config: Config = {
         "logo-slide-reverse": "slide-reverse 60s infinite linear",
       },
       keyframes: {
+        "fade-in": {
+          "0%": {
+            opacity: "0%",
+          },
+          "50%": {
+            opacity: "0%",
+          },
+          "100%": {
+            opacity: "100%",
+          },
+        },
         "fade-left": {
           "0%": {
             opacity: "0%",
