@@ -1,11 +1,9 @@
 import Image from "next/image";
-import Photo from "@/assets/foto.jpg";
 import GradientText from "@/components/gradient-text";
 import Strip from "@/components/strip";
 import About from "@/components/about";
 import Contact from "@/components/contact";
 import Projects from "@/components/projects";
-
 
 export default function Home() {
   return (
@@ -35,9 +33,9 @@ export default function Home() {
               <Image
                 width={200}
                 height={200}
-                src={Photo}
+                src={"https://github.com/maycomwill.png"}
                 alt=""
-                className="object-fit absolute top-0 z-10 transition-all duration-500 ease-in-out group-hover:scale-105"
+                className="transition-all duration-200 ease-in-out group-hover:scale-105"
               />
             </div>
             <div className="absolute left-2 top-2 z-0 h-[200px] w-[200px] border-2 border-white bg-transparent transition-all duration-500 ease-in-out group-hover:left-3 group-hover:top-3 group-hover:animate-border-transition" />
