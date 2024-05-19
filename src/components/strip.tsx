@@ -175,34 +175,45 @@ function Strip({ color = "primary", className = "" }: StripProps) {
   return (
     <div
       className={clsx(
-        "animate-fade-in md:animate-none group absolute flex w-full space-x-16 overflow-hidden whitespace-nowrap py-2 transition-all duration-150 ease-in-out",
+        "animate-fade-in group absolute flex w-full space-x-16 overflow-hidden whitespace-nowrap py-2 transition-all duration-150 ease-in-out md:animate-none",
         {
-          "rotate-6 md:rotate-2 bg-zinc-700 text-zinc-900": color === "secondary",
-          "-rotate-6 md:-rotate-2 bg-yellow-500 text-zinc-900": color === "primary",
+          "rotate-6 bg-zinc-700 text-zinc-900 md:rotate-2":
+            color === "secondary",
+          "-rotate-6 bg-yellow-500 text-zinc-900 md:-rotate-2":
+            color === "primary",
         },
         className,
       )}
     >
       <div
-        className={clsx("group-hover:paused animate-logo-slide flex space-x-16", {
-          "animate-logo-slide-reverse": color === "secondary",
-        })}
+        className={clsx(
+          "group-hover:paused flex animate-logo-slide space-x-16",
+          {
+            "animate-logo-slide-reverse": color === "secondary",
+          },
+        )}
       >
         {techs.map((tech) => returnIcon(tech))}
       </div>
       <div
         aria-hidden="true"
-        className={clsx("group-hover:paused animate-logo-slide flex space-x-16", {
-          "animate-logo-slide-reverse": color === "secondary",
-        })}
+        className={clsx(
+          "group-hover:paused flex animate-logo-slide space-x-16",
+          {
+            "animate-logo-slide-reverse": color === "secondary",
+          },
+        )}
       >
         {techs.map((tech) => returnIcon(tech))}
       </div>
       <div
         aria-hidden="true"
-        className={clsx("group-hover:paused animate-logo-slide flex space-x-16", {
-          "animate-logo-slide-reverse": color === "secondary",
-        })}
+        className={clsx(
+          "group-hover:paused flex animate-logo-slide space-x-16",
+          {
+            "animate-logo-slide-reverse": color === "secondary",
+          },
+        )}
       >
         {techs.map((tech) => returnIcon(tech))}
       </div>

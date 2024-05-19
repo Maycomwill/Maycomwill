@@ -11,6 +11,8 @@ import {
   mdiLanguageHtml5,
   mdiLanguageJavascript,
 } from "@mdi/js";
+import { Star } from "@phosphor-icons/react";
+import { GitFork } from "lucide-react";
 
 function RepoCard({ repo }: { repo: Repository }) {
   const iconData = getLanguageIcon(repo.language);
@@ -72,10 +74,10 @@ function RepoCard({ repo }: { repo: Repository }) {
         return "https://cadernetadigital.vercel.app/";
       case "pomodoro react":
         return "https://pomodoro-react-maycomwill.vercel.app/";
-        case "todo list oficina":
-          return "https://inovagil-todo-web.onrender.com/";
-        case "aula todo":
-          return "https://inovagil-todo-web.onrender.com/";
+      case "todo list oficina":
+        return "https://inovagil-todo-web.onrender.com/";
+      case "aula todo":
+        return "https://inovagil-todo-web.onrender.com/";
       default:
         return repo.html_url;
     }
@@ -95,7 +97,7 @@ function RepoCard({ repo }: { repo: Repository }) {
         </span>
       </div>
       <div className="absolute top-12 z-20 flex flex-col space-y-4 px-2">
-        <p className="text-justify text-sm text-white/70">{description}</p>
+        <p className="text-justify text-base text-white/70">{description}</p>
         <p className="text-left text-sm text-white/70">
           Criado em:{" "}
           {formatDistanceToNow(repo.created_at, {
@@ -110,6 +112,20 @@ function RepoCard({ repo }: { repo: Repository }) {
             addSuffix: true,
           })}
         </p>
+      </div>
+      <div className="z-24 absolute bottom-2 left-4 flex space-x-4">
+        <div className="flex flex-col items-center justify-center space-y-1">
+          <Star size={16} color={"rgb(161 161 170)"} />
+          <span className="text-justify text-sm text-zinc-400">
+            {repo.stargazers_count}
+          </span>
+        </div>
+        <div className="flex flex-col items-center justify-center space-y-1">
+          <GitFork size={16} color={"rgb(161 161 170)"} />
+          <span className="text-justify text-sm text-zinc-400">
+            {repo.forks_count}
+          </span>
+        </div>
       </div>
       <div className="absolute -bottom-4 -right-6 z-0 opacity-20 transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:opacity-60">
         {repo.language !== null ? (

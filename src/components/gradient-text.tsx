@@ -10,7 +10,7 @@ const GradientText = ({
   return (
     <span
       className={clsx(
-        "bg-size-200 bg-pos-100 group-hover:bg-pos-0 select-none bg-gradient-to-r from-violet-500 via-cyan-600 to-emerald-500 bg-clip-text font-title text-8xl text-transparent transition-all duration-500 ease-in-out",
+        "select-none bg-gradient-to-r from-violet-500 via-cyan-600 to-emerald-500 bg-size-200 bg-clip-text bg-pos-100 font-title text-8xl text-transparent transition-all duration-500 ease-in-out group-hover:bg-pos-0",
         className,
       )}
     >

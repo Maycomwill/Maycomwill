@@ -9,7 +9,10 @@ import React from "react";
 
 function Contact() {
   return (
-    <section id="contact" className="px-4 md:px-0 mt-12 min-h-[28rem] w-full text-left">
+    <section
+      id="contact"
+      className="mt-12 min-h-[28rem] w-full px-4 text-left md:px-0"
+    >
       <h1 className="pb-12 font-title text-5xl tracking-[0.3rem]">CONTATO</h1>
       <div className="flex flex-col space-y-12">
         <p>
